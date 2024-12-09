@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!--IMPORTA CSS EXTERNO-->
+    <title>Aisten Silva - Web Developer</title>
+</head>
+<body>
+    <header> <!--INICIO CABEÇALHO-->
+        <div id="logo-header">
+            <a href="#">Aisten Silva</a>
+            <h1>Web Developer</h1>
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#sobre-mim">Sobre mim</a></li> 
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Porftolio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>  
+    </header> <!--FIM CABEÇALHO-->
+
+    <article> 
+        <h2>Criando <span>soluções criativas</span> para a web.</h2>
+        <img src="imagens/programador-ilustrado.png" alt="Ilustração de Programador">
+    </article>
+
+    <main> 
+        <section id="sobre-mim"> <!--INICIO SOBRE MIM -->
+            <h1 class="titulo">Sobre mim</h1>
+            <p class="texto">Sou Aisten Silva, desenvolvedor web com paixão por criar experiências digitais que aliam funcionalidade e design. Com uma base sólida em tecnologias modernas, busco sempre oferecer soluções criativas e eficientes para a web. Fora do ambiente de desenvolvimento, sou entusiasta em modelagem 3D para jogos, adoro jogar video games e tenho um grande interesse criar jogos, onde posso explorar minha criatividade de forma única.</p>
+        </section> <!--FIM SOBRE MIM -->
+
+        <section id="formacao"> <!--INICIO FORMAÇÃO -->
+            <h1 class="titulo">Formação</h1>
+            <p class="texto">Minha jornada no mundo da tecnologia começou em 2013, quando me formei no curso Técnico em Programação pela ETEC - Escola Técnica Estadual. Desde então, venho expandindo meus conhecimentos e aprimorando minhas habilidades, atualmente cursando a graduação em Análise e Desenvolvimento de Sistemas na Uninter - Centro Universitário. A cada novo aprendizado, meu entusiasmo por criar soluções inovadoras e eficientes só cresce, impulsionando minha carreira na área de desenvolvimento web. Além disso, sou fluente em inglês e tenho o desejo de aprender mandarim, a língua falada na China, pois considero o país fascinante e cheio de oportunidades.
+            </p>
+        </section> <!--FIM FORMAÇÃO-->
+        
+        <h1 class="titulo">Portfolio</h1> <!--INICIO PORTFOLIO -->
+        <section class="portfolio"  id="portfolio">
+            <div>
+                <a href="https://devaisten.github.io/ctrlaltdrink/" target="_blank"><img src="imagens/Site1.png" alt="Site-1"></a>
+                <h2>CtrlAltDrink | Pub</h2>
+            </div>
+
+            <div>
+                <a href="https://devaisten.github.io/FullStackCafe/"><img src="imagens/Site2.png" alt="Site-2"></a>
+                <h2>FullStackCafe</h2>
+            </div>
+        </section> <!--FIM PORFOLIO-->
+
+        <section id="contato"> <!--INICIO CABEÇALHO-->
+            <h1 class="titulo">Contato</h1>
+            <div>
+                <form action="#" method="post" id="form-contato">
+                    <input type="text" name="nome" id="" placeholder="Seu nome:" required>
+                    <input type="text" name="email" id="" placeholder="Seu email:" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem:" required></textarea>
+                    <div class="btn-enviar"><button type="submit">Enviar</button></div>
+                </form>
+            </div>
+        </section> <!--FIM CONTATOS-->
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Aisten Silva. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const form = document.getElementById('form-contato');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // BLOQUEIA ENVIO
+            alert('Formulário enviado!'); // MENSAGEM NA TELA APOS ENVIO
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

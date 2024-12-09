@@ -1,0 +1,348 @@
+/* ESTILOS GERAIS */
+* { /* REMOVE TODAS AS MARGENS E ESPAÇAMENTOS INTERNOS DE TODOS OS ELEMENTOS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{ /* REMOVE O SUBLINHADO E DEFINE A COR PARA TODOS OS LINKS*/
+    text-decoration: none;
+    color: white;
+}
+
+body { /* DEFINE O TIPO DA FONTE E COR PARA TODO O SITE*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #131313;
+    height: 100vh; /* DEFINE TAMANHO MAXIMO DO SITE*/
+}
+
+h1, h2, p{
+    color: white;
+}
+
+section {
+    scroll-margin-top: 90px; /* AJUSTAR ALTURA AO CLICAR NO LINK*/
+}
+
+
+
+.titulo {
+    font-size: 2.2rem;
+    color: #1893eb;
+}
+
+.texto {
+    padding: 20px 4%;
+    font-size: 1.1rem;
+}
+
+
+/* HEADER */
+header {
+    background-color: #3d96d6;
+    position: fixed; /* FIXA O HEADER NO TOPO */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* GARANTE QUE FICA SOBRE TODOS OS ELEMENTOS */
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* CENTRALIZA OS ELEMENTOS DENTRO DO HEADER*/
+}
+
+
+/* LOGO */
+#logo-header{ /* ADICIONA UM ESPAÇO NA ESQUEDA DA LOGO*/
+    margin-left: 20px; 
+}
+
+#logo-header a {   /* DEFINE TIPO DA FONTE, TAMANHO E COR*/
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
+
+#logo-header h1 { /* DEFINE TIPO DA FONTE, ESPAÇAMENTO E COR*/
+    color: white;
+    font-style: italic;
+    letter-spacing: 5px;
+    font-size:.8rem;
+}
+
+
+
+/* MENU */
+
+#menu{ /* DEFINE ESPAÇO ENTRE OS ITENS*/
+    justify-content: space-between;
+}
+#menu ul { /*TRANSFORMA MENU EM FLEX, PARA OS ITENS FICAREM UM AO LADO DO OUTRO*/
+    display: flex;
+    list-style: none; /* REMOVE AS BOLINHAS DA LISTA*/
+}
+
+#menu li {
+    margin-left: 15px;
+}
+
+#menu a {
+    padding: 28px;
+    font-size: 1.2rem;
+    margin:0px;
+}
+
+#menu a:hover { /* DEFINE COR QUANDO O MOUSE PASSA POR CIMA*/
+    background-color: #3583bb;
+}
+
+/* ------- FIM HEADER ------*/
+
+/* APRESENTAÇÃO INICIAL*/
+
+article {
+    padding: 80px 0 40px 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    grid-gap:50px;
+    align-items: center;
+}
+
+article h2{
+    font-size: 2.5rem;
+}
+
+article h2 span{
+    color: #389ae0;
+}
+article img{
+    max-width: 400px;
+}
+
+/*------- FIM INICIO -------*/
+
+/* SOBRE MIM */
+
+#sobre-mim {
+    padding: 20px 4%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* FORMAÇÃO */
+
+#formacao {
+    padding: 20px 4%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* PORTFOLIO */
+.titulo {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#portfolio {
+    scroll-margin-top: 180px; /* AJUSTAR ALTURA */
+}
+
+.portfolio {
+    display: flex;
+    margin: 0 auto;  
+    padding: 10px;
+    justify-content: center; 
+    gap:150px;
+    
+}
+
+.portfolio div {
+    position: relative; /* ADICIONA RELATIVE PARA PODER POSICIONAR O TITULO SOBRE A IMAGEM*/
+    border-radius: 4%; /* ARREDONDA AS BORDAS */
+    overflow: hidden; /* GARANTE QUE A BOX NÃO ULTRAPASSE O LIMITE DO CONTAINER */
+    transition: .2s;
+}
+
+.portfolio div:hover {
+    transform: scale(1.05);
+}
+
+.portfolio div a img {
+    width: 200px;
+    background-size: cover;
+}
+
+.portfolio h2 {
+    position: absolute; /* USA A POSIÇÃO DO CONTAINER DE REFERENCIA PARA POSICIONAR */
+    bottom: 0; /* ALINHA NO FINAL*/
+    width: 100%; /* USA 100% DE LARGURA DO CONTAINER */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 1rem;
+    border-radius: 4%;
+}
+
+
+
+
+/* CONTATO */
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#contato form input, form textarea{ /* DEFINE ESTILO DO FORMULARIO TAMANHO E COR DE FUNDO*/
+    width: 100%;
+    background-color: #3a3a3aa4;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+    margin: 15px;
+}
+
+textarea {  /* DEFINE TAMANHO DA TEXTAREA E DESABILITA O BOTAO DE ESCALA*/
+    resize: none; 
+    height: 150px;
+}
+
+#contato button { /* DEFINE ESTILO DO BOTAO*/
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.05rem;
+    background-color: #389ae0;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+
+
+.btn-enviar{ /* CENTRALIZA O BOTAO E ADICIONA UM ESPAÇO ENTRE O FOOTER*/
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px 4%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #1d1d1d;
+}
+
+/* RESPONSIVO ---------------------------------------------------------------------*/
+
+@media (max-width: 1025px) {
+    
+    /* GERAIS */
+
+    .titulo {
+        margin-top: 50px;
+        font-size: 1.5rem;
+    }
+
+    section {
+        scroll-margin-top: 220px; /* AJUSTAR ALTURA AO CLICAR NO LINK*/
+    }
+
+    /* HEADER */
+    header {
+        flex-direction: column; /* DEIXA A DIREÇÃO DO FLEX NA VERTICAL */
+        gap: 20px; /* AJUSTA O ESPAÇAMENTO DOS ITENS */
+    }
+
+    /* MENU*/
+    
+    #menu  {
+        width: 100%;
+    }
+
+    #menu ul { 
+        flex-direction: column; /* DEIXA A DIREÇÃO DO FLEX NA VERTICAL */
+        gap: 10px; 
+        width: 100%; /* MENU OCUPA 100% DO CONTAINER */
+        text-align: center; 
+    }
+    #menu li {
+        display: flex;
+        width: 100%;
+    } 
+    #menu a {
+        flex:1;
+        padding: 5px;
+    } 
+    
+    /* APRESENTAÇÃO INICIAL*/
+
+    article {
+        margin-top: 200px;
+        display: grid;
+        grid-template-columns: 1fr; /* TRANSFORMA PARA UMA UNICA COLUNA */
+       
+    }
+
+    article h2{
+        font-size: 1.5rem;
+        grid-row: 1; /* DEFINE A LINHA QUE DO ITEM */
+        margin:0 20px;
+        text-align: center;
+      
+    }
+
+    article img{
+        max-width: 300px; /* ALTERA O TAMANHO DA IMAGEM */
+        grid-row: 2;  /* DEFINE A LINHA QUE DO ITEM */
+        margin: 0 auto;
+    }
+
+    /*  PORTFOLIO */
+    #portfolio {
+        scroll-margin-top: 350px; /* AJUSTAR ALTURA AO CLICAR NO LINK*/
+    }
+    .portfolio div a img{
+      width: 150px;
+      height: 200px;
+    }
+    .portfolio {
+        gap:50px;
+    }
+    
+    /* CONTATO */
+
+    form {
+    max-width: 350px; 
+    }
+    
+    /* FOOTER */
+
+    footer {
+        font-size: 1rem;
+    }
+
+}
